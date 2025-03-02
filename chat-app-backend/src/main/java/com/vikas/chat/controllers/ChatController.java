@@ -4,7 +4,6 @@ import com.vikas.chat.entities.Message;
 import com.vikas.chat.entities.Room;
 import com.vikas.chat.payload.MessageRequest;
 import com.vikas.chat.repositories.RoomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -15,11 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://localhost:5173")
 public class ChatController {
 
-    @Autowired
     private RoomRepository roomRepository;
+
+    private ChatController(RoomRepository roomRepository){
+        this.roomRepository = roomRepository;
+    }
 
     // for sending and receiving messages
     @MessageMapping("/sendMessage/{roomId}") // app/sendMessage/roomId
@@ -37,9 +39,10 @@ public class ChatController {
         if (room != null) {
             room.getMessages().add(message);
             roomRepository.save(room);
-        }else{
+        } else {
             throw new RuntimeException("Room Not Found !!");
         }
+
         return message;
     }
 }

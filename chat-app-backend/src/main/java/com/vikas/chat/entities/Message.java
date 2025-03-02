@@ -2,18 +2,14 @@ package com.vikas.chat.entities;
 
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.time.LocalDateTime;
 
-@NoArgsConstructor
 @AllArgsConstructor
 public class Message {
 
     private String sender;
     private String content;
+    private LocalDateTime timestamp;
 
     public LocalDateTime getTimestamp() {
         return timestamp;
@@ -39,7 +35,9 @@ public class Message {
         this.sender = sender;
     }
 
-    private LocalDateTime timestamp;
+    public Message(){
+
+    }
 
     public Message(String sender, String content){
         this.sender = sender;

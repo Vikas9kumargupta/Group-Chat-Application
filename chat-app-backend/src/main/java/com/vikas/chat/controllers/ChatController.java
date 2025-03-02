@@ -1,5 +1,6 @@
 package com.vikas.chat.controllers;
 
+import com.vikas.chat.config.AppConstants;
 import com.vikas.chat.entities.Message;
 import com.vikas.chat.entities.Room;
 import com.vikas.chat.payload.MessageRequest;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin(AppConstants.FRONT_END_BASE_URL)
 public class ChatController {
 
     private RoomRepository roomRepository;

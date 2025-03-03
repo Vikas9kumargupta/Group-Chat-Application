@@ -5,7 +5,6 @@ import com.vikas.chat.config.AppConstants;
 import com.vikas.chat.entities.Message;
 import com.vikas.chat.entities.Room;
 import com.vikas.chat.repositories.RoomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

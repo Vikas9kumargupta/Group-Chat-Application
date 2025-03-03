@@ -2,17 +2,17 @@ version: '3.8'
 
 services:
   mongo:
-    image: mongo
+    image: mongo:5.0
     container_name: mongodb
     ports:
       - "27018:27017"
     volumes:
       - mongo-db:/data/db
     networks:
-      - app-networks
+      - app-network
 
   boot-app:
-    image: vikas016/chatback
+    image: vikas016/chatback:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -21,11 +21,10 @@ services:
     depends_on:
       - mongo
     networks:
-      - app-networks
+      - app-network
 
 volumes:
   mongo-db:
 
 networks:
-  app-networks:
-
+  app-network:

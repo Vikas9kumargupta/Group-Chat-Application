@@ -20,6 +20,7 @@ const ChatPage = () => {
   // console.log(roomId);
   // console.log(currentUser);
   // console.log(connected);
+  console.log("Chat Page");
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -34,8 +35,6 @@ const ChatPage = () => {
   const chatBoxRef = useRef(null);
   const [stompClient, setStompClient] = useState(null);
 
-  //page init:
-  //messages ko load karne honge
 
   useEffect(() => {
     async function loadMessages() {
@@ -171,7 +170,7 @@ const ChatPage = () => {
               <div className="flex flex-row gap-2">
                 <img
                   className="h-10 w-10"
-                  src={"https://avatar.iran.liara.run/public/43"}
+                  src={"https://avatar.iran.liara.run/public/2"}
                   alt=""
                 />
                 <div className="flex flex-col gap-1">

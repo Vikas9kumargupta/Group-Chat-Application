@@ -43,7 +43,6 @@ public class ChatController {
         } else {
             throw new RuntimeException("Room Not Found !!");
         }
-
         return message;
     }
 }

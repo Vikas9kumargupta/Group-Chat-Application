@@ -78,12 +78,6 @@ Ensure MongoDB is running on your system.
 
 ---
 
-## 🖥️ Screenshots
-
-_(Add some screenshots of your app here)_
-
----
-
 ## 🎯 Future Enhancements
 - ✅ Direct messaging support
 - ✅ Message reactions and emoji support

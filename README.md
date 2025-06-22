@@ -2,6 +2,12 @@
 
 A real-time group chat application built using **React + Vite** for the frontend and **Spring Boot + WebSocket + MongoDB** for the backend. The app provides seamless, instant messaging with a modern UI and robust backend infrastructure.
 
+![Java](https://img.shields.io/badge/Java-17-blue?logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?logo=spring)
+![JavaScript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)
+![React](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 ---
 
 ## 🚀 Features
